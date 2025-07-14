@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body class="min-h-screen flex flex-col items-center">
+    <h1 class="text-6xl font-bold text-yellow-200 mt-8 mb-6">My To-Do List</h1>
+    <form action="/first" id="todo-form" class="w-full max-w-md flex flex-col items-center gap-4">
+        <ul id="task-list" class="w-full space-y-3 mb-4">
+            <div class="task-item flex items-center bg-white rounded shadow p-3 wakeup">
+                <input type="checkbox" name="task1" id="task1" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Wake Up</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 pray">
+                <input type="checkbox" name="task2" id="task2" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Pray</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 bible">
+                <input type="checkbox" name="task3" id="task3" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Read My Bible</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 Work">
+                <input type="checkbox" name="task4" id="task4" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Work</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 code-work">
+                <input type="checkbox" name="task5" id="task5" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Code alongside Work</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 lunch">
+                <input type="checkbox" name="task6" id="task6" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Lunch</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 Web3">
+                <input type="checkbox" name="task7" id="task7" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Complete all my tasks in Web3</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 reports">
+                <input type="checkbox" name="task8" id="task8" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Submit Daily Reports</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 code">
+                <input type="checkbox" name="task9" id="task9" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Code For some hrs</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+            <div class="task-item flex items-center bg-white rounded shadow p-3 sleep">
+                <input type="checkbox" name="task10" id="task10" class="mr-3 accent-green-500">
+                <li class="flex-1 text-blue-700 font-semibold">Sleep</li>
+                <button type="button" class="edit-btn bg-transparent border-0 cursor-pointer"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16.862 3.487a2.25 2.25 0 113.182 3.182l-9.193 9.193a2.25 2.25 0 01-1.012.57l-3.193.798a.75.75 0 01-.91-.91l.798-3.193a2.25 2.25 0 01.57-1.012l9.193-9.193z" />
+                    </svg></button>
+                <button type="button" class="delete-btn bg-transparent border-0 cursor-pointer">
+                    <!-- Trash icon with stripes (Heroicons outline) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-500 hover:text-gray-700"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10" />
+                    </svg>
+                </button>
+            </div>
+        </ul>
+        <div class="w-full flex gap-2">
+            <input type="text" id="daily-task" placeholder="Add a new to-do"
+                class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 flex-1">
+            <button id="add-task" type="submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Add Task</button>
+        </div>
+    </form>
+    <script src="todo.js"></script>
+</body>
+
+</html>
